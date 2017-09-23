@@ -6,7 +6,7 @@ The effects of electronic trading have been debated extensively. Specific areas 
 
 ## Problem Statement 
 
-The goal is to assess which factors affect order execution quality accross different market centers, classes of security, and order types. The data is available from 2005 up until recent months for certain market centers, so an analysis can be conducted on how these factors have changed over an extended time period during which the market share and sophistication of electronic trading have increased.
+The goal is to assess which factors affect order execution quality across different market centers, classes of security, and order types. The data is available from 2005 up until recent months for certain market centers, so an analysis can be conducted on how these factors have changed over an extended time period during which the market share and sophistication of electronic trading have increased.
 
 ## Available Data
 
