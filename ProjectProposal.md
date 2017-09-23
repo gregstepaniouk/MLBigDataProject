@@ -1,4 +1,4 @@
-# Order Execution Analysis Project Proposal
+# Securities Order Execution Analysis Project Proposal
 ## Introduction and Project Motivation
 The financial markets have changed substantially over the years, and the days of the busy stock exchange floor have come to an end. Most trading now occurs electronically. Human buyers and sellers are matched up by complex algorithms that rapidly transact in an increasingly competitive environment where every nanosecond of latency has its impact on profit margins. According to a recent congressional research service [report](https://fas.org/sgp/crs/misc/R44443.pdf), high frequency trading (HFT) makes up roughly 55% of US equity trading volume. 
 
