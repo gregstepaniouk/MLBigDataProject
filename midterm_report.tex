@@ -22,7 +22,7 @@
 \begin{multicols}{2}
 \section{Introduction}
 \setlength{\parindent}{1cm}
-The goal of this project is the predict the transaction costs an investor can expect when an order for securities is routed to an electronic market center. Various security specific factors are being used, along with SEC Rule 605 data, which mandates the disclosure of order execution metrics by market centers. The Rule 605 data is merged with a dataset from the Center for Research in Security Prices, which provides additional security specific factors.
+The goal of this project is to predict the transaction costs an investor can expect when an order for securities is routed to an electronic market center. Various security specific factors are being used, along with SEC Rule 605 data, which mandates the disclosure of order execution metrics by market centers. The Rule 605 data is merged with a dataset from the Center for Research in Security Prices, which provides additional security specific factors.
 \par This progress report details the feature transformations performed on the data as well as the qualities of specific features. The process to obtain an initial linear model is also explained and the results of the fit are provided. The initial performance is discussed and the next steps for the project are determined.
 
 \section{Rule 605 Data Processing}
@@ -135,7 +135,7 @@ One feature which seemed promising is MMCNT from the CRSP dataset. This is the c
 I fit the trial linear model using Virtu Financial's disclosed trades in December 2016. This does not represent the entire final dataset, but does contain 28,000 line items and information about 1.46 million market and marketable limit orders. I conduct all the previously described transformations on this dataset and extract the chosen features.
 \par
 \par 
-I start by adding a standard offset as a column of ones to my feature matrix. I then proceed to winsorize the data at a 1\%, 99\% level to remove any extreme outliers. The scale of the input measures varies by several orders of magnitude. To make the coefficients interpretable, I standardize all the features as well as my Y output. I fit the following model on a random training set representing 80\% of the data.
+I start by adding a standard offset as a column of ones to my feature matrix. I then proceed to winsorize the data at a 1\%, 99\% level to adjust any extreme outliers. The scale of the input measures varies by several orders of magnitude. To make the coefficients interpretable, I standardize all the features as well as my Y output. I fit the following model on a random training set representing 80\% of the data.
 
 
     \includegraphics[width=7cm]{table1.png}
