@@ -47,7 +47,7 @@ Weighted average transformations are performed with either total covered shares 
 \begin{equation} \frac{1}{\sum_{}EXSH}\ \sum_{MC} \sum_{Size} \sum_{Type} AESP_{ijk}*EXSH_{ijk} \end{equation}
 
 \par
-Although I have removed the granularity provided by order size codes, I preserve order size information by calculating the average shares per order (SHPO) for each security. This is done by dividing total covered shares (TCSH) by total covered orders (TCOR). The following is a histogram of average order sizes for Virtu Financial (a major electronic market maker) during December 2016.
+Although I have removed the granularity provided by order size codes, I preserve order size information by calculating the average shares per order (SHPO) for each security. This is done by dividing total covered shares (TCSH) by total covered orders (TCOR). To prevent underfitting, I avoid removing a useful feature for the sake of consolidation. The following is a histogram of average order sizes for Virtu Financial (a major electronic market maker) during December 2016.
 \begingroup
     \centering
     \includegraphics[width=9cm]{SPO.png}
@@ -84,7 +84,7 @@ The Rule 605 data only comes in monthly intervals, while the CRSP data is availa
 
 
 \subsection{Missing Values}
-Like most financial data, the CRSP dataset has a substantial amount of missing data. Complete cases make up less than 25\% of my chosen feature space. As a result, when taking monthly averages of features, I implement the following logic to have as much usable data as possible.
+Like most financial data, the CRSP dataset has a substantial amount of missing data. Complete cases make up less than 25\% of my chosen feature space. As a result, when taking monthly averages of features, I implement the following logic. This ensures I can have as many usable line items as possible to prevent overfitting by more complex models.
 
 
 
